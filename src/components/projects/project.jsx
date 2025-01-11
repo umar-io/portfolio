@@ -6,7 +6,7 @@ import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
 import "./styles/project.css";
 
 const Project = (props) => {
-  const { logo, title, description, firstLink, secondLink } = props;
+  const { logo, title, description, sourceCodeLink, previewLink } = props;
 
   return (
     <React.Fragment>
@@ -37,7 +37,7 @@ const Project = (props) => {
 
               <Link
                 className="project-link-text"
-                to={firstLink}
+                to={sourceCodeLink}
                 style={{
                   cursor: "pointer",
                 }}
@@ -58,7 +58,7 @@ const Project = (props) => {
                 <FontAwesomeIcon icon={faLink} />
               </div>
 
-              <Link className="project-link-text" to={secondLink}>
+              <Link className="project-link-text" to={previewLink}>
                 Live Preview
               </Link>
             </div>
